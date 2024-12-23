@@ -1,3 +1,5 @@
+package tcp;
+
 import java.io.*;
 import java.net.InetAddress;
 import java.net.ServerSocket;
@@ -7,7 +9,7 @@ public class Server {
     public static void main(String[] args) {
         try {
             ServerSocket serverSocket = new ServerSocket(8010);
-            System.out.println("New Server :"+serverSocket.getInetAddress());
+            System.out.println("New tcp.Server :"+serverSocket.getInetAddress());
             System.out.println(serverSocket.getLocalPort());
             System.out.println("---------Ready---------");
             do {
@@ -21,7 +23,6 @@ public class Server {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     public static class ClientHandler extends Thread {
